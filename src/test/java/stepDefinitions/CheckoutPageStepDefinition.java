@@ -19,6 +19,7 @@ public CheckoutPageStepDefinition(TestContextSetup testContextSetup)
 {
 	this.testContextSetup=testContextSetup;
 	this.checkoutPage = testContextSetup.pageObjectManager.getCheckoutPage();
+
 }
 
 
