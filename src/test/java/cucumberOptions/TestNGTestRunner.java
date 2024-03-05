@@ -11,12 +11,12 @@ plugin= {"pretty","html:src/test/resources/Reports/cucumber.html", "json:src/tes
 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 "rerun:src/test/resources/failed_scenarios.txt"})
 public class TestNGTestRunner extends AbstractTestNGCucumberTests{
-
+/*
 	@Override
 	@DataProvider(parallel=true)
 	public Object[][] scenarios()
 	{
 		return super.scenarios();
-	}
+	}*/
 	
 }

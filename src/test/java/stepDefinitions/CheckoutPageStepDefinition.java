@@ -19,6 +19,10 @@ public CheckoutPageStepDefinition(TestContextSetup testContextSetup)
 {
 	this.testContextSetup=testContextSetup;
 	this.checkoutPage = testContextSetup.pageObjectManager.getCheckoutPage();
+	System.out.println("Pass first");
+	System.out.println("Pass second");
+	System.out.println("Pass third");
+	System.out.println("Pass fourth");
 }
 
 

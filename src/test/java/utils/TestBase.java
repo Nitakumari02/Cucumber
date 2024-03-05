@@ -2,6 +2,7 @@ package utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.FileInputStream;
@@ -12,6 +13,7 @@ import java.util.Properties;
 public class TestBase {
 
 	public WebDriver driver;
+	ChromeOptions options = new ChromeOptions();
 	
 	public WebDriver WebDriverManager() throws IOException
 	{
@@ -25,13 +27,15 @@ public class TestBase {
 		
 		String browser = browser_maven!=null ? browser_maven : browser_properties;
 
+		options.addArguments("--headless=new");
+
 		
 		if(driver == null)
 		{
 			if(browser.equalsIgnoreCase("chrome"))
 			{
 		System.setProperty("webdriver.chrome.driver","./src/test/resources/Driver/chromedriver");
-		driver = new ChromeDriver();// driver gets the life
+		driver = new ChromeDriver(options);// driver gets the life
 			}
 			if(browser.equalsIgnoreCase("firefox"))
 			{
